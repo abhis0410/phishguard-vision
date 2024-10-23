@@ -13,6 +13,7 @@ PhishGuard Vision is a machine learning-based project that detects phishing webs
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Website](#website)
 - [Dataset](#dataset)
 - [Model Training](#model-training)
 - [Contributing](#contributing)
@@ -51,9 +52,20 @@ PhishGuard Vision is a machine learning-based project that detects phishing webs
 python detect.py --image sample_screenshot.png
 ```
 
+
+## Website
+
+1. **Run the streamlit app**:
+   ```bash
+   streamlit run ./app/streamlit_app.py
+   ```
+
+2. **Output**: This will run the website, where user can upload and classify the image.
+
+
 ## Dataset
 
-The project uses a dataset of phishing and legitimate website screenshots. You can find the dataset [here](dataset-link).
+The project uses a dataset of phishing and legitimate website screenshots. You can find the dataset [Dataset Link](https://www.kaggle.com/datasets/saurabhshahane/phishiris)
 
 - **Legitimate Website Screenshots**: Images of well-known and trusted websites.
 - **Phishing Website Screenshots**: Screenshots of known phishing sites, collected from security resources.
@@ -63,7 +75,7 @@ The project uses a dataset of phishing and legitimate website screenshots. You c
 To retrain the model:
 
 1. **Prepare the dataset**:
-   - Place phishing and legitimate screenshots into `data/phishing/` and `data/legitimate/`.
+   - Place phishing and legitimate screenshots into `data/train/phishing/` and `data/train/legitimate/`.
 
 2. **Train the model**:
    ```bash
@@ -75,9 +87,10 @@ To retrain the model:
 
 ## Contributing
 
-Contributions are welcome! Please fork this repository and submit a pull request with your changes. You can also report any issues or suggestions in the [Issues](https://github.com/yourusername/phishguard-vision/issues) section.
+Contributions are welcome! Please fork this repository and submit a pull request with your changes. 
+You can also report any issues or suggestions in the [Issues](https://github.com/abhis0410/phishguard-vision/issues) section.
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
 
