@@ -1,26 +1,25 @@
+import os, sys
+root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(root_dir)
+
+# Importing Libraries
 import streamlit as st
 from PIL import Image
 import numpy as np
-import os
-import time
 import json
-import os
+
+from functions import predict_phishing
+
 
 with open('config.json', 'r') as f:
     DETAILS = json.load(f)
 
-def predict_phishing(image):
-    time.sleep(3)
-    return False, 92
-
-
 
 def main(**args):
     st.title("🛡️ PhishGuard Vision")
-    st.write(
+    st.markdown(
         """
-        Welcome to **PhishGuard Vision** \n
-        A tool to detect phishing websites from screenshots. \r
+        Welcome to **PhishGuard Vision**, A tool to detect phishing websites from screenshots. \n
         Upload a screenshot (PNG format), and our model will predict whether the site is a phishing attempt or legitimate.
         """
     )
